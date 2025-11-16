@@ -99,8 +99,16 @@ export url='https://raw.githubusercontent.com/juewuy/ShellCrash/master' && wget 
 
 <img src="/public/configuration_2.png" width=600/>
 
-
+在这里我们需要着重讲的是**在线生成配置文件**这一项，首先你需要输入您的订阅节点的URL，这个至关重要不是你的vmess URL切记。
+这个订阅节点可以是您花钱买的，也可是是您自己通过BPB Panel创建的Cloudflare节点。
 
 ## UI端管理
 
-打开http://192.168.31.1:9999/ui/#/。
+```bash
+crash
+```
+<img src="/public/dashboard_install.png" width=600/>
+
+打开http://192.168.31.1:9999/ui。
+
+<img src="/public/dashboard.png" width=600/>
