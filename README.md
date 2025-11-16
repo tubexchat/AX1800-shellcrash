@@ -61,3 +61,34 @@ ifconfig | grep "inet "
 export http_proxy="http://192.168.31.167:1082"
 export https_proxy="http://192.168.31.167:1082"
 ```
+
+设置后可以测试下是否可以使用Google：
+
+```bash
+curl -v google.com
+```
+
+到了这里有关于AX1800硬件环境的配置就大功告成了，接下来进入本教程的核心环节ShellCrash的安装与配置
+
+## ShellCrash的安装与配置
+
+[ShellCrash](https://github.com/juewuy/ShellCrash) 原名ShellClash是著名的科学上网工具，类似于 Passwall、OpenClash 等，但是区别在于，从名字可以看出，它是基于 Shell 脚本实现的，并没有图形界面。是目前最为流行的软路由工具之一。有关于该项目可以在Github上自行查询。
+
+### 脚本安装
+
+在OpenWrt系统环境中运行以下任意安装脚本：
+
+```bash
+#GitHub源(可能需要代理)
+export url='https://raw.githubusercontent.com/juewuy/ShellCrash/master' && sh -c "$(curl -kfsSl $url/install.sh)" && source /etc/profile &> /dev/null
+#jsDelivrCDN源
+export url='https://fastly.jsdelivr.net/gh/juewuy/ShellCrash@master' && sh -c "$(curl -kfsSl $url/install.sh)" && source /etc/profile &> /dev/null
+#作者私人源
+export url='https://gh.jwsc.eu.org/master' && sh -c "$(curl -kfsSl $url/install.sh)" && source /etc/profile &> /dev/null
+#GitHub源(可能需要代理)
+export url='https://raw.githubusercontent.com/juewuy/ShellCrash/master' && wget -q --no-check-certificate -O /tmp/install.sh $url/install.sh  && sh /tmp/install.sh && source /etc/profile &> /dev/null
+```
+
+<img src="/public/install.png" width=600/>
+
+
