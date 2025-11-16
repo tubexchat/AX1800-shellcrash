@@ -42,3 +42,22 @@ ssh -o HostKeyAlgorithms=+ssh-rsa root@192.168.31.1
 
 <img src="/public/shadowrocket.png" width=600/>
 
+然后在本机终端中执行：
+
+```bash
+ifconfig | grep "inet "
+```
+
+找到局域网内本地IP地址：
+
+<img src="/public/local_ip.png" width=600/>
+
+> 如：192.168.31.167
+
+在AX1800路由器环境的终端中设置http/https代理环境变量执行如下：
+
+```bash
+# 设置您的本机IP和代理端口，以下仅为DEMO
+export http_proxy="http://192.168.31.167:1082"
+export https_proxy="http://192.168.31.167:1082"
+```
