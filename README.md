@@ -16,7 +16,7 @@
 
 <img src="/public/home.png" width=600/>
 
-进入页面后选择**常用设置**/**系统状态**，点击**手动升级**，将本项目中[miwifi_rm1800_firmware_fafda_1.0.336.bin]()下载并上传上去。
+进入页面后选择**常用设置**/**系统状态**，点击**手动升级**，将本项目中[miwifi_rm1800_firmware_fafda_1.0.336.bin](https://github.com/tubexchat/AX1800-shellcrash/blob/main/files/miwifi_rm1800_firmware_fafda_1.0.336.bin)下载并上传上去。
 
 <img src="/public/upgrade.png" width=600/>
 
@@ -112,3 +112,9 @@ crash
 打开http://192.168.31.1:9999/ui。
 
 <img src="/public/dashboard.png" width=600/>
+
+目前我使用Cloudflare搭建了一个16K的私人通道，最终效果如下：
+
+<img src="/public/screen.png" width=600/>
+
+
