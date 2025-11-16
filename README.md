@@ -109,7 +109,7 @@ crash
 ```
 <img src="/public/dashboard_install.png" width=600/>
 
-打开http://192.168.31.1:9999/ui。
+打开http://192.168.31.1:9999/ui
 
 <img src="/public/dashboard.png" width=600/>
 
