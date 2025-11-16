@@ -113,7 +113,7 @@ crash
 
 <img src="/public/dashboard.png" width=600/>
 
-目前我使用Cloudflare搭建了一个16K的私人通道，最终效果如下：
+目前我使用Cloudflare CDN搭建了一个16K的[BPB Panel](https://github.com/tubexchat/AX1800-shellcrash/blob/main/bpb.md)私人通道，最终效果如下：
 
 <img src="/public/screen.png" width=600/>
 
