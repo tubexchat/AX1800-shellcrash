@@ -27,3 +27,18 @@
 降级成功之后，我们需要进行SSH的配置和登录。打开[路由器配置页面](http://192.168.31.1/cgi-bin/luci/web)的控制台，将本项目中的set_ssh.js脚本代码在浏览器console(控制台)中进行运行。运行成功后，会弹出密码设置，比如：admin
 
 <img src="/public/set_ssh_secret.png" width=600/>
+
+接着我们在本地计算机的终端上通过SSH连接小米AX1800路由器：
+
+```bash
+ssh -o HostKeyAlgorithms=+ssh-rsa root@192.168.31.1
+```
+
+> 注: 为什么不直接使用ssh root@192.168.31.1，因为现有的终端已经升级加密算法，需要指定ssh-rsa
+
+在进入路由器环境之后，我们会发现这就是一个OpenWrt版本的Linux环境。为了后续加载源文件和配置文件上保持网络畅通，我们给首先给这个嵌入式Linux环境配置好临时的终端科学上网环境。我们这里以ShadowRocket为例。
+
+在**设置/代理**页面中找到我们科学上网的代理端口(如：1082)
+
+<img src="/public/shadowrocket.png" width=600/>
+
