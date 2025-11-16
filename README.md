@@ -91,4 +91,16 @@ export url='https://raw.githubusercontent.com/juewuy/ShellCrash/master' && wget 
 
 <img src="/public/install.png" width=600/>
 
+### 脚本配置
 
+运行脚本`crash`,我们依次按图进行配置：
+
+<img src="/public/configuration_1.png" width=600/>
+
+<img src="/public/configuration_2.png" width=600/>
+
+
+
+## UI端管理
+
+打开http://192.168.31.1:9999/ui/#/。
