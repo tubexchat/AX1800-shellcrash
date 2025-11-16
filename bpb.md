@@ -4,6 +4,8 @@
 
 点击https://[域名]/panel，
 
+<img src="/public/vless.png" width=600/>
+
 <img src="/public/routing_rules.png" width=600/>
 
 
