@@ -118,7 +118,7 @@ crash
 
 ## FQA
 
-1.  ssh -o HostKeyAlgorithms=+ssh-rsa root@192.168.31.1
+1.  指纹报错 ```bash ssh -o HostKeyAlgorithms=+ssh-rsa root@192.168.31.1
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -131,7 +131,7 @@ Please contact your system administrator.
 Add correct host key in /Users/lewiszhang/.ssh/known_hosts to get rid of this message.
 Offending RSA key in /Users/lewiszhang/.ssh/known_hosts:112
 Host key for 192.168.31.1 has changed and you have requested strict checking.
-Host key verification failed.
+Host key verification failed.```
 
 答：这是由于本机指纹不对，可以删除后再次登录：
 
