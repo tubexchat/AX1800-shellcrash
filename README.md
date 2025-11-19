@@ -118,20 +118,16 @@ crash
 
 ## FQA
 
-1.  指纹报错
-   ```bash
-   ssh -o HostKeyAlgorithms=+ssh-rsa root@192.168.31.1
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+1.  登录时指纹报错
+```bash
 IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
 Someone could be eavesdropping on you right now (man-in-the-middle attack)!
 It is also possible that a host key has just been changed.
 The fingerprint for the RSA key sent by the remote host is
 SHA256:2Xi64sJhqfWjHsg9Jk1QbS9YyuipP1LEjaXGzMznoHQ.
 Please contact your system administrator.
-Add correct host key in /Users/lewiszhang/.ssh/known_hosts to get rid of this message.
-Offending RSA key in /Users/lewiszhang/.ssh/known_hosts:112
+Add correct host key in /Users/---/.ssh/known_hosts to get rid of this message.
+Offending RSA key in /Users/--/.ssh/known_hosts:112
 Host key for 192.168.31.1 has changed and you have requested strict checking.
 Host key verification failed.
 ```
