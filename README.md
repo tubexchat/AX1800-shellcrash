@@ -116,4 +116,30 @@ crash
 
 <img src="/public/screen.png" width=600/>
 
+## FQA
+
+1.  ssh -o HostKeyAlgorithms=+ssh-rsa root@192.168.31.1
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the RSA key sent by the remote host is
+SHA256:2Xi64sJhqfWjHsg9Jk1QbS9YyuipP1LEjaXGzMznoHQ.
+Please contact your system administrator.
+Add correct host key in /Users/lewiszhang/.ssh/known_hosts to get rid of this message.
+Offending RSA key in /Users/lewiszhang/.ssh/known_hosts:112
+Host key for 192.168.31.1 has changed and you have requested strict checking.
+Host key verification failed.
+
+答：这是由于本机指纹不对，可以删除后再次登录：
+
+```bash
+ssh-keygen -R 192.168.31.1
+```
+
+2. CDN服务是否正常运行
+
+答：可以通过打开http://192.168.31.1:9999/ui/，进行验证，如果不能进入可以进入路由器中，运行`crash`，然后选择1重启即可。
 
