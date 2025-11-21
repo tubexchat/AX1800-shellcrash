@@ -152,3 +152,6 @@ ssh-keygen -R 192.168.31.1
 cd /tmp/ShellCrash
 vim config.yaml
 ```
+
+---
+参考资料：[BPB-Worker-Panel](https://bia-pain-bache.github.io/BPB-Worker-Panel/configuration/vless-trojan/#supported-tls)
