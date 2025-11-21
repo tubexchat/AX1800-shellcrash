@@ -19,6 +19,7 @@ https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
 ## 清洁 IP
 
 ```bash
+# 注意中国区使用需要先关梯子
 ./CloudflareScanner
 ```
 
