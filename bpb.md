@@ -1,15 +1,12 @@
 # BPB Panel 配置
 
-BPB Panel是一款基于Cloudflare Worker边缘计算的代理软件，由于众所周知的原因直接部署会导致封杀所以便有个各个魔改版本如：
+BPB Panel是一款基于Cloudflare Worker边缘计算的代理软件，当一个设备（电脑或路由器）添加代理设置后，审查系统（如 GFW）在网络边界进行检测时，看到的只是从您的设备发出的、加密的、目标是 Cloudflare IP 的 HTTPS 流量。由于 Cloudflare 是全球最大的 CDN 和安全服务商，其 IP 承载着海量的合法流量，审查系统通常无法或不愿轻易封锁 Cloudflare 的 IP，这使得代理流量得以安全通过。
 
-1. [bia-pain-bache](https://github.com/bia-pain-bache/BPB-Worker-Panel)
-2. [NAT64套壳混淆代码](https://github.com/yonggekkk/Cloudflare-vless-trojan/blob/main/Vless_workers_pages/nat64%E5%A5%97%E5%A3%B3%E7%89%88%E6%B7%B7%E6%B7%86.js)
+但由于是通过Cloudflare CDN的网络的边缘IP发出网络请求，但是由于大量的网站自身部署在Cloudflare，为防止循环请求这就导致在原生环境中部署在Cloudflare的代理无法访问部署在Cloudflare上的网页，如：cloudflare.com/javbus.com/x.com，所以我们通过配置Proxy IP来规避这一问题，以甬哥的nat64混淆代码为例，它提供了www.visa.com/cis.visa.com/africa.visa.com等13个与VISA相关的域名，看起来像是在访问一个全球性的、高度敏感的金融服务网站。最终通过Cloudflare CDN的边缘IP发出抵达最近的真实网站服务器。
 
-## Bia Pain Bache版本 4.0.1
+但是这种方式对于某些大厂责可能无效如：Google、Tiktok、Claude等。这里我们就要讲讲互联网中诡异的”送中“现象。这是最常见的原因。如果这个 IP 段（或这个特定的 IP）被大量讲中文的用户使用（例如用作梯子/VPN），并且这些用户在浏览器的语言设置中首选中文。当大厂服务器检测到大量中文搜索流量且无法定位到中国大陆时，算法会倾向于将其标记为香港。或者大量的用户在使用该IP时启动了GPS定位，且将IP定位至香港则也会导致所谓”送中“现象。**所以对于通过BPB Panel方式建立的节点必须配置属于自己的域名**
 
-在变量中设置好UUID、TR_PASS、PROXY_IP三个变量。然后绑定kv空间，在这里注意变量名称需要为小写。
-
-
+[NAT64套壳混淆代码](https://github.com/yonggekkk/Cloudflare-vless-trojan/blob/main/Vless_workers_pages/nat64%E5%A5%97%E5%A3%B3%E7%89%88%E6%B7%B7%E6%B7%86.js)
 
 
 ## BPB面板设置
