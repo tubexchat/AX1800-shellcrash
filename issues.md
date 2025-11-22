@@ -1,6 +1,6 @@
 # Issues 已知问题 
 
-1. 甬哥Nat64 worker脚本无法访问TikTok和Gemini
+1. 甬哥Nat64 worker脚本无法访问TikTok和Gemini，原因是被识别出中国用户
 
 2. bpb_obfs_pack.zip pages脚本无法访问Cloudflare网页
 
@@ -12,9 +12,6 @@
 
 由于是通过Cloudflare CDN的网络的边缘IP发出网络请求，但是由于大量的网站自身部署在Cloudflare，为防止循环请求这就导致在原生环境中部署在Cloudflare的代理无法访问部署在Cloudflare上的网页，如：cloudflare.com/javbus.com/x.com
 
-## Proxy IP
-
-https://www.nslookup.io/domains/bpb.yousef.isegaro.com/dns-records/
 
 ## 清洁 IP
 
