@@ -52,7 +52,7 @@ ifconfig | grep "inet "
 
 <img src="/public/local_ip.png" width=600/>
 
-> 如：192.168.31.167
+> 如：192.168.31.167。步骤： 进入 Shadowrocket -> 设置 (Settings) -> 代理 (Proxy) -> 代理共享 (Proxy Share)。开关： 确保 “启用共享 (Enable Share)” 的开关已打开。
 
 在AX1800路由器环境的终端中设置http/https代理环境变量执行如下：
 
